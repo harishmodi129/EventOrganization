@@ -1,6 +1,7 @@
-.main_container {
+.main-container {
   display: flex;
   overflow-x: hidden;
+  background-color: black;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -39,7 +40,6 @@
 
 .text_section_second {
   width: 7%;
-  height: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -197,4 +197,293 @@ p {
   display: block;
   opacity: 1;
   cursor: pointer;
+}
+
+.intro_section {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-direction: row;
+}
+.intro_section img {
+  width: 3rem;
+  height: 3rem;
+}
+.intro_section h2 {
+  color: rgb(247, 204, 124);
+  font-size: 3rem;
+}
+
+.event_organization {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 60rem;
+}
+.event_organization h1 {
+  font-size: 7rem;
+  color: rgb(133, 132, 132);
+}
+
+.collection_combo {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 1.25rem;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 25px;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  width: 50%;
+  height: 3rem;
+}
+
+.event_combo {
+  border-radius: 20px;
+  background-color: rgb(105, 105, 105);
+  height: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+.event_combo label {
+  margin-top: 0.25rem;
+}
+
+.venu_collection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.venu_collection div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.venu_collection div i {
+  color: white;
+}
+
+.wishlist_button {
+  width: 10rem;
+  border-radius: 10rem;
+  height: 3rem;
+  background-color: rgb(231, 174, 68);
+  margin-top: 2rem;
+  color: black;
+  font-weight: bold;
+}
+
+.last_section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Small screens (600px and below) */
+@media (max-width: 600px) {
+  .main-container {
+    background-color: black;
+    transition: transform 0.3s ease-in-out;
+  }
+  .main_section {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  #navbarWrapper.show {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+  }
+  #navbarWrapper:hover {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .sidebar {
+    width: 150px;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    height: 100%;
+  }
+  .first_section {
+    width: 100%;
+  }
+  .text_section_second {
+    width: 100%;
+    writing-mode: horizontal-tb;
+  }
+  .text_representation {
+    display: flex;
+    font-size: 2rem;
+    flex-direction: row;
+    align-items: center;
+    animation: scroll 10s linear infinite;
+    width: 100%;
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+    color: white;
+    color: black;
+    font-weight: bold;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .third_section {
+    width: 100%;
+    padding: 1rem;
+  }
+  .event_highlight {
+    font-size: 2rem;
+  }
+  .highlight_color {
+    font-size: 1.5rem;
+  }
+  #navbarWrapper {
+    opacity: 1;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    opacity: 1;
+  }
+  .sidebar {
+    width: 100%;
+    transform: none; /* Ensure the sidebar doesn't cause overflow */
+  }
+  .overlay {
+    padding: 1rem;
+  }
+  .horizontal_distribution {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .shifted {
+    transform: none; /* Reset transform on small screens */
+  }
+  /* Navbar styles */
+  /* Sidebar adjustment for smaller screens */
+  /* Overlay styles */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem; /* Add padding for smaller screens */
+  }
+  /* Horizontal distribution adjustments */
+  .horizontal_distribution {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .venu_collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  .venu_collection div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .venu_collection div i {
+    color: white;
+  }
+  .loreum_ipsume {
+    font-size: 1rem;
+  }
+  .collection_combo {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1rem;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 25px;
+    background-color: rgb(71, 71, 71);
+    color: white;
+    width: 70%;
+    height: 2rem;
+    margin-bottom: 1rem;
+  }
+  .event_combo {
+    border-radius: 20px;
+    background-color: rgb(105, 105, 105);
+    height: 100%;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .event_combo label {
+    margin-top: 0.1rem;
+  }
+  .intro_section {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex-direction: row;
+  }
+  .intro_section img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .intro_section h2 {
+    color: rgb(247, 204, 124);
+    font-size: 1rem;
+  }
+  .event_organization {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 50rem;
+  }
+  .event_organization h1 {
+    font-size: 4rem;
+    color: rgb(133, 132, 132);
+  }
+  .image_section {
+    height: 10rem;
+    width: 10rem;
+  }
+  .wishlist_button {
+    width: 10rem;
+    border-radius: 7rem;
+    height: 3rem;
+    background-color: rgb(231, 174, 68);
+    margin-top: 1rem;
+    color: black;
+    font-weight: bold;
+    font-size: 0.5rem;
+  }
+  .last_section {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

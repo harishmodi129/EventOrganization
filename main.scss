@@ -1,0 +1,827 @@
+.main-container {
+  display: flex;
+  overflow-x: hidden;
+  background-color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main_section {
+  background-color: rgb(44, 44, 44);
+  // width: 100%;
+  //   height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  flex: 1;
+  padding: 1rem;
+  // transition: transform 0.3s ease-in-out;
+}
+
+.shifted {
+  transform: translateX(300px);
+}
+
+.sidebar {
+  width: 300px;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  height: 100%;
+  // left: -300px;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+//   h2 {
+//     font-size: 3rem;
+//     color: white;
+//     text-transform: uppercase;
+//     position: absolute;
+//     // top: 50%;
+
+//     // transform: translate(-50%, -50%);
+//     z-index: 1;
+//   }
+
+// .carousel-item img {
+//   z-index: 2;
+// }
+.first_section {
+  width: 55%;
+  position: relative;
+  //   z-index: 2;
+}
+
+.text_section_second {
+  width: 7%;
+  // height: 100%;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgb(169, 109, 226);
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 200%;
+}
+
+.text_representation {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: row;
+  align-items: center;
+
+  animation: scroll 10s linear infinite;
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  // animation: scorll 5s linear infinite;
+  color: white;
+  font-size: 2rem;
+  color: black;
+  font-weight: bold;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+p {
+  margin: 0;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.highlight_color {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.event_highlight {
+  color: white;
+  //   text-transform: uppercase;
+  font-size: 3rem;
+}
+.location_section {
+  color: white;
+}
+
+.image_section {
+  height: 20rem;
+  width: 20rem;
+}
+
+.third_section {
+  width: 35%;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+
+  flex-direction: column;
+}
+
+.fourth_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.slider {
+  position: absolute;
+  width: 90%;
+  overflow: hidden;
+  height: 40rem;
+  top: 20%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 1rem;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  border: none;
+}
+
+.slides img {
+  width: 100%;
+  // height: auto;
+  height: 40rem;
+  display: block;
+}
+
+.event_holder {
+  border-radius: 2rem;
+  height: 4rem;
+  width: 10rem;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  color: white;
+  // background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.horizontal_distribution {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+#navbarWrapper {
+  opacity: 0;
+  // visibility: hidden;
+  // visibility: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#navbarWrapper.show {
+  // display: block;
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+#navbarWrapper:hover {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.intro_section {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  flex-direction: row;
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+  h2 {
+    color: rgb(247, 204, 124);
+    font-size: 3rem;
+  }
+}
+
+.event_organization {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 60rem;
+  h1 {
+    font-size: 7rem;
+    color: rgb(133, 132, 132);
+  }
+}
+
+// .collection_combo {
+//   font-size: 1.5rem;
+//   display: flex;
+//   flex-direction: row;
+//   text-align: center;
+//   border-radius: 35px;
+//   background-color: rgb(71, 71, 71);
+//   width: 40%;
+//   height: 3.2rem;
+//   align-items: center;
+// }
+
+.collection_combo {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  // gap: 1rem;
+  font-size: 1.25rem;
+  // padding: 0.5rem;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 25px;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  width: 50%;
+  height: 3rem;
+  // height: 100%;
+}
+
+.event_combo {
+  border-radius: 20px;
+  background-color: rgb(105, 105, 105);
+  height: 100%;
+  flex-grow: 1;
+  // margin-top: 0.25rem;
+  align-items: center;
+  label {
+    margin-top: 0.25rem;
+  }
+}
+.venu_collection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    i {
+      color: white;
+    }
+  }
+}
+
+.wishlist_button {
+  width: 10rem;
+  border-radius: 10rem;
+  height: 3rem;
+  background-color: rgb(231, 174, 68);
+  margin-top: 2rem;
+  color: black;
+  font-weight: bold;
+}
+
+.last_section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+} //* Default styles */
+
+/* Small screens (600px and below) */
+// @media (max-width: 600px) {
+//   .main-container {
+//     background-color: black;
+//     transition: transform 0.3s ease-in-out;
+//   }
+//   .main_section {
+//     display: flex;
+//     flex-direction: column;
+//     background-color: black;
+//     width: 100%;
+//     // left: -300px;
+//     overflow-x: hidden;
+//     transition: transform 0.3s ease-in-out;
+//   }
+
+//   #navbarWrapper.show {
+//     // display: block;
+//     opacity: 1;
+//     visibility: visible;
+//     cursor: pointer;
+//   }
+
+//   #navbarWrapper:hover {
+//     display: block;
+//     opacity: 1;
+//     cursor: pointer;
+//   }
+
+//   .sidebar {
+//     width: 150px;
+//     background-color: black;
+//     color: white;
+//     padding: 1rem;
+//     position: fixed;
+//     transition: transform 0.3s ease-in-out;
+//     transform: translateX(-100%);
+//     height: 100%;
+//     // left: -300px;
+//   }
+
+//   .first_section {
+//     width: 100%;
+//   }
+
+//   .text_section_second {
+//     width: 100%;
+//     writing-mode: horizontal-tb;
+//     // transform: rotate(180deg);
+//   }
+
+//   .text_representation {
+//     display: flex;
+//     font-size: 2rem;
+//     flex-direction: row;
+//     align-items: center;
+
+//     animation: scroll 10s linear infinite;
+//     width: 100%;
+
+//     writing-mode: horizontal-tb;
+//     // transform: rotate(180deg);
+//     white-space: nowrap;
+//     // animation: scorll 5s linear infinite;
+//     color: white;
+//     // font-size: 2rem;
+//     color: black;
+//     font-weight: bold;
+//   }
+//   @keyframes scroll {
+//     0% {
+//       transform: translateX(0%);
+//     }
+
+//     100% {
+//       transform: translateX(-50%);
+//     }
+//   }
+
+//   .third_section {
+//     width: 100%;
+//     padding: 1rem;
+//   }
+
+//   .event_highlight {
+//     font-size: 2rem;
+//   }
+
+//   .highlight_color {
+//     font-size: 1.5rem;
+//   }
+
+//   #navbarWrapper {
+//     opacity: 1;
+//   }
+
+//   .navbar-nav {
+//     flex-direction: column;
+//     gap: 1rem;
+//     width: 100%;
+//     opacity: 1;
+//   }
+
+//   .sidebar {
+//     width: 100%;
+//     // position: static;
+//     transform: none; /* Ensure the sidebar doesn't cause overflow */
+//   }
+
+//   .overlay {
+//     padding: 1rem;
+//   }
+
+//   .horizontal_distribution {
+//     flex-direction: column;
+//     gap: 1rem;
+//     font-size: 1rem;
+//   }
+
+//   .shifted {
+//     transform: none; /* Reset transform on small screens */
+//   }
+
+//   /* Navbar styles */
+//   // .navbar-nav {
+//   //   flex-direction: row;
+//   //   gap: 1rem;
+//   //   width: 100%;
+//   // }
+
+//   // #navbarWrapper {
+//   //   width: 100%;
+//   //   opacity: 1;
+//   // }
+
+//   /* Sidebar adjustment for smaller screens */
+//   // .sidebar {
+//   //   width: 250px; /* Adjust width for smaller screens */
+//   //   transform: translateX(-100%); /* Ensure sidebar is hidden by default */
+//   // }
+
+//   /* Overlay styles */
+//   .overlay {
+//     display: none;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0, 0, 0, 0.8);
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 1000;
+//     padding: 1rem; /* Add padding for smaller screens */
+//   }
+
+//   /* Horizontal distribution adjustments */
+//   .horizontal_distribution {
+//     flex-direction: row;
+//     gap: 1rem;
+//   }
+
+//   .venu_collection {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     font-size: 1rem;
+//     div {
+//       display: flex;
+//       gap: 1rem;
+//       align-items: center;
+//       i {
+//         color: white;
+//       }
+//     }
+//   }
+
+//   .loreum_ipsume {
+//     font-size: 1rem;
+//   }
+
+//   .collection_combo {
+//     display: flex;
+//     flex-direction: row;
+//     text-align: center;
+//     // gap: 1rem;
+//     font-size: 1rem;
+//     // padding: 0.5rem;
+//     align-items: center;
+//     flex-grow: 1;
+//     border-radius: 25px;
+//     background-color: rgb(71, 71, 71);
+//     color: white;
+//     width: 70%;
+//     height: 2rem;
+//     margin-bottom: 1rem;
+//     // height: 100%;
+//   }
+
+//   .event_combo {
+//     border-radius: 20px;
+//     background-color: rgb(105, 105, 105);
+//     height: 100%;
+//     flex-grow: 1;
+//     // margin-top: 0.25rem;
+//     align-items: center;
+//     label {
+//       margin-top: 0.1rem;
+//     }
+//   }
+
+//   .intro_section {
+//     display: flex;
+//     gap: 1rem;
+//     padding: 1rem;
+//     flex-direction: row;
+//     img {
+//       width: 2rem;
+//       height: 2rem;
+//     }
+//     h2 {
+//       color: rgb(247, 204, 124);
+//       font-size: 1rem;
+//     }
+//   }
+
+//   .event_organization {
+//     padding: 1rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
+//     height: 50rem;
+//     h1 {
+//       font-size: 4rem;
+//       color: rgb(133, 132, 132);
+//     }
+//   }
+//   .image_section {
+//     height: 10rem;
+//     width: 10rem;
+//   }
+
+//   .wishlist_button {
+//     width: 10rem;
+//     border-radius: 7rem;
+//     height: 3rem;
+//     background-color: rgb(231, 174, 68);
+//     margin-top: 1rem;
+//     color: black;
+//     font-weight: bold;
+//     font-size: 0.5rem;
+//   }
+
+//   .last_section {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 0.5rem;
+//     margin-top: 1rem;
+//   }
+// }
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-container {
+    background-color: black;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .main_section {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #navbarWrapper.show {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  #navbarWrapper:hover {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    width: 150px;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    height: 100%;
+  }
+
+  .first_section {
+    width: 100%;
+  }
+
+  .text_section_second {
+    width: 100%;
+    writing-mode: horizontal-tb;
+  }
+
+  .text_representation {
+    display: flex;
+    font-size: 2rem;
+    flex-direction: row;
+    align-items: center;
+    animation: scroll 10s linear infinite;
+    width: 100%;
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+    color: white;
+    font-weight: bold;
+  }
+  .slides img {
+    width: 100%;
+    // height: auto;
+    height: 30rem;
+    display: block;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .third_section {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .event_highlight {
+    font-size: 2rem;
+  }
+
+  .highlight_color {
+    font-size: 1.5rem;
+  }
+
+  #navbarWrapper {
+    opacity: 1;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    opacity: 1;
+  }
+
+  .sidebar {
+    width: 200px;
+    transform: none; /* Ensure the sidebar doesn't cause overflow */
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+
+  .horizontal_distribution {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .shifted {
+    transform: none; /* Reset transform on medium screens */
+  }
+
+  /* Overlay styles */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem; /* Add padding for medium screens */
+  }
+
+  /* Horizontal distribution adjustments */
+  .horizontal_distribution {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .venu_collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    div {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      i {
+        color: white;
+      }
+    }
+  }
+
+  .loreum_ipsume {
+    font-size: 1rem;
+  }
+
+  .collection_combo {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1rem;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 25px;
+    background-color: rgb(71, 71, 71);
+    color: white;
+    width: 70%;
+    height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .event_combo {
+    border-radius: 20px;
+    background-color: rgb(105, 105, 105);
+    height: 100%;
+    flex-grow: 1;
+    align-items: center;
+    label {
+      margin-top: 0.1rem;
+    }
+  }
+
+  .intro_section {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex-direction: row;
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+    h2 {
+      color: rgb(247, 204, 124);
+      font-size: 1rem;
+    }
+  }
+
+  .event_organization {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 50rem;
+    h1 {
+      font-size: 4rem;
+      color: rgb(133, 132, 132);
+    }
+  }
+
+  .image_section {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .wishlist_button {
+    width: 10rem;
+    border-radius: 7rem;
+    height: 3rem;
+    background-color: rgb(231, 174, 68);
+    margin-top: 1rem;
+    color: black;
+    font-weight: bold;
+    font-size: 0.5rem;
+  }
+
+  .last_section {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
